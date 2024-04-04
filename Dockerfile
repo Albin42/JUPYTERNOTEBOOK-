@@ -7,5 +7,6 @@ COPY . ./
 
 RUN pip install pip pipenv --upgrade
 RUN pipenv install --skip-lock --system --dev
+RUN python3 -m pip install notebook
 
 CMD ["./scripts/entrypoint.sh"]
