@@ -18,6 +18,7 @@ c.NotebookApp.port = int(os.environ.get("PORT", 8888))
 c.NotebookApp.allow_root = True
 c.NotebookApp.allow_password_change = True
 c.ConfigurableHTTPProxy.command = ['configurable-http-proxy', '--redirect-port', '80']
+ipython -c "from notebook.auth import passwd; passwd()"
 
 # Configuration file for jupyter-notebook.
 
